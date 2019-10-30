@@ -1,8 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 sns.set()
+
+root_dir = os.path.abspath(os.curdir)
+root_dir = '/'.join(root_dir.split('/')[:-1])  # nav up 1 directory from '_code' folder
 
 # parameter settings
 np.random.seed(1)
@@ -23,4 +27,5 @@ plt.xlabel('Standard Deviation')
 plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) *
          np.exp(-(bins - mu) ** 2 / (2 * sigma ** 2)),
          linewidth=2, color='r')
+plt.savefig(root_dir + '/images/normal_distribution.png')
 plt.show()
