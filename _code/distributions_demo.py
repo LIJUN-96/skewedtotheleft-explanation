@@ -35,7 +35,7 @@ print(f'Normal Skewed skew: {dist_skew}\n')
 # plot left skewed box plot
 sns.boxplot(normal_values)
 plt.title('Normal Distribution Box Plot')
-plt.savefig(root_dir + '/images/left_skewed_boxplot.png')
+plt.savefig(root_dir + '/images/normal_boxplot.png')
 plt.show()
 
 
