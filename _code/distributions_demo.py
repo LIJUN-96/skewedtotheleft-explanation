@@ -22,7 +22,7 @@ normal_values = np.random.normal(mu, sigma, n)
 sns.distplot(normal_values, bins=20)
 plt.title('Normal Distribution')
 plt.ylabel('Probability (PDF)')
-plt.savefig(root_dir + '/images/normal_distribution.png')
+plt.savefig(root_dir + '/images/normal_distribution.png', dpi=300)
 plt.show()
 
 dist_mean = np.round(normal_values.mean(), 4)
@@ -35,7 +35,7 @@ print(f'Normal Skewed skew: {dist_skew}\n')
 # plot left skewed box plot
 sns.boxplot(normal_values)
 plt.title('Normal Distribution Box Plot')
-plt.savefig(root_dir + '/images/normal_boxplot.png')
+plt.savefig(root_dir + '/images/normal_boxplot.png', dpi=300)
 plt.show()
 
 
@@ -47,7 +47,7 @@ right_skewed_values = gamma.rvs(a=skew_factor, size=10000)
 sns.distplot(right_skewed_values, kde=True, bins=20)
 plt.title(f'Right Skewed Distribution')
 plt.ylabel('Probability (PDF)')
-plt.savefig(root_dir + '/images/right_skewed_distribution.png')
+plt.savefig(root_dir + '/images/right_skewed_distribution.png', dpi=300)
 plt.show()
 
 dist_mean = np.round(right_skewed_values.mean(), 4)
@@ -65,7 +65,7 @@ left_skewed_values += (-left_skewed_values.min() + 1)
 sns.distplot(left_skewed_values, bins=20)
 plt.title('Left Skewed Distribution')
 plt.ylabel('Probability (PDF)')
-plt.savefig(root_dir + '/images/left_skewed_distribution.png')
+plt.savefig(root_dir + '/images/left_skewed_distribution.png', dpi=300)
 plt.show()
 
 dist_mean = np.round(left_skewed_values.mean(), 4)
@@ -79,6 +79,6 @@ print(f'Left Skewed skew: {dist_skew}\n')
 # plot left skewed box plot
 sns.boxplot(left_skewed_values)
 plt.title('Left Skewed Distribution Box Plot')
-plt.savefig(root_dir + '/images/left_skewed_boxplot.png')
+plt.savefig(root_dir + '/images/left_skewed_boxplot.png', dpi=300)
 plt.show()
 
